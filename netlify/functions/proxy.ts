@@ -18,7 +18,7 @@ const pickHeaders = (headers: Headers, keys: (string | RegExp)[]): Headers => {
   /*picked.set("authority", "poe.com")
   picked.set("Origin", "https://poe.com")
   picked.set("Referer", "https://poe.com/")*/
-  
+  picked.set("X-Goog-Api-Key", "AIzaSyBGb5fGAyC-pRcRU6MUHb__b_vKha71HRE")
   return picked;
 };
 
