@@ -51,7 +51,10 @@ export default async (request: Request, context: Context) => {
     return new Response(blank_html, {
       headers: {
         ...CORS_HEADERS,
-        "content-type": "text/html"
+        "content-type": "text/html",
+        "Referer": "https://poe.com/",
+        "Cookie": "p-b=6VaGMaRaFmBrV3dzybC4Lg%3D%3D; p-lat=b7xbYBJ%2FTPJnppeufI6IbyGsUV4KV0oTjF2kApBsAg%3D%3D; __cf_bm=VkhxSvsksNSQDd1V1FoAb4CYKV1jZoGSLKMPXkq.Y.U-1713953847-1.0.1.1-4dbRQq9NLfr09sxO9jxZWzU2Q00Jv0qww5Lh73srHIJFLYjIAzS_zD92eU.e83FH1DeL4aj3n6VeAlftzmBfuA; cf_clearance=xV.j6Sqr6lgWmZnt2Ou.dPNJ5jUnc8UcVjYWL23l138-1713953848-1.0.1.1-sojMZ9fDcoFEZnASNcT.ZqETZJ8.mESEhiWnTmjnfBAC7P7XDtTcmI1H.AzmcwGnnnqaF3G22Ga_s5yhD2oRRg",
+        
       },
     });
   }
