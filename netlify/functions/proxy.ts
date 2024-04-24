@@ -6,7 +6,8 @@ const pickHeaders = (headers: Headers, keys: (string | RegExp)[]): Headers => {
     if (keys.some((k) => (typeof k === "string" ? k === key : k.test(key)))) {
       const value = headers.get(key);
       if (typeof value === "string") {
-        picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "gemini.google.com"));
+        // picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "gemini.google.com"));
+        picked.set(key, value);
       }
     }
   }
