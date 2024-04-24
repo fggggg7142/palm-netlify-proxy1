@@ -28,7 +28,7 @@ export default async (request: Request, context: Context) => {
   }
 
   const { pathname, searchParams } = new URL(request.url);
-  if(pathname === "/") {
+  if(false && pathname === "/") {
     let blank_html = `
 <!DOCTYPE html>
 <html>
