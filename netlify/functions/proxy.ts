@@ -71,6 +71,7 @@ export default async (request: Request, context: Context) => {
   });
   let headers1 = request.headers
   for (let key in headers1) {
+    console.log("= = a", key, headers1[key])
     headers1[key] = headers1[key].replace("radiant-cajeta-4ecfa9.netlify.app", "poe.com")
   }
   const headers = pickHeaders(headers1, ["content-type", "x-goog-api-client", "x-goog-api-key", "accept-encoding"]);
