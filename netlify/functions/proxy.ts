@@ -71,7 +71,7 @@ export default async (request: Request, context: Context) => {
   });
 
   const headers = pickHeaders(request.headers, ["content-type", "x-goog-api-client", "x-goog-api-key", "accept-encoding"]);
-
+  headers.set("Referer", "https://poe.com" + pathname)
   const response = await fetch(url, {
     body: request.body,
     method: request.method,
