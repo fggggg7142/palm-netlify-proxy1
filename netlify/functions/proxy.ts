@@ -69,11 +69,11 @@ export default async (request: Request, context: Context) => {
   searchParams.forEach((value, key) => {
     url.searchParams.append(key, value);
   });
-  let headers = request.headers
-  for (let key in headers) {
-    headers[key] = headers[key].replace("radiant-cajeta-4ecfa9.netlify.app", "poe.com")
+  let headers1 = request.headers
+  for (let key in headers1) {
+    headers1[key] = headers1[key].replace("radiant-cajeta-4ecfa9.netlify.app", "poe.com")
   }
-  const headers = pickHeaders(headers, ["content-type", "x-goog-api-client", "x-goog-api-key", "accept-encoding"]);
+  const headers = pickHeaders(headers1, ["content-type", "x-goog-api-client", "x-goog-api-key", "accept-encoding"]);
   const response = await fetch(url, {
     body: request.body,
     method: request.method,
