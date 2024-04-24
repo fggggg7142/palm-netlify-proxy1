@@ -56,7 +56,7 @@ export default async (request: Request, context: Context) => {
     });
   }
 
-  const url = new URL(pathname, "https://generativelanguage.googleapis.com");
+  const url = new URL(pathname, "https://poe.com");
   searchParams.delete("_path");
 
   searchParams.forEach((value, key) => {
