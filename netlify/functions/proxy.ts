@@ -6,13 +6,13 @@ const pickHeaders = (headers: Headers, keys: (string | RegExp)[]): Headers => {
     if (keys.some((k) => (typeof k === "string" ? k === key : k.test(key)))) {
       const value = headers.get(key);
       if (typeof value === "string") {
-        picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "poe.com"));
+        picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "gemini.google.com"));
         //picked.set(key, value);
       }
     }
     const value = headers.get(key);
     if (typeof value === "string") {
-      picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "poe.com"));
+      picked.set(key, value.replace("radiant-cajeta-4ecfa9.netlify.app", "gemini.google.com"));
       //picked.set(key, value);
     }
   }
@@ -71,7 +71,7 @@ export default async (request: Request, context: Context) => {
     });
   }
 
-  const url = new URL(pathname, "https://poe.com");
+  const url = new URL(pathname, "https://gemini.google.com");
   searchParams.delete("_path");
 
   searchParams.forEach((value, key) => {
